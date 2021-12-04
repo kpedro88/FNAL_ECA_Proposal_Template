@@ -10,6 +10,10 @@
 \usepackage{fullpage}
 \usepackage{titlesec}
 \usepackage{array}
+\usepackage{etoolbox, pdfpages}
+\patchcmd{\thebibliography}{\section *{\refname }}{\section{\refname}\label{sec:biblio}}{}{}
+\newcommand{\collabletter}[1]{\includepdf[pages=-, pagecommand={\thispagestyle{empty}\rfoot{\thepage}}]{#1}\clearpage}
+\pdfminorversion=7
 
 \setlength{\pdfpagewidth}{8.5in}
 \setlength{\pdfpageheight}{11in}
@@ -17,13 +21,6 @@
 \titlespacing*{\section}{0pt}{0pt}{0pt}
 \titleformat{\section}{\normalfont\fontsize{11}{15}\bfseries}{\thesection}{1em}{}
 \setlength{\baselineskip}{13pt}
-
-\usepackage{titling}
-\setlength{\droptitle}{-4em} %default
-\addtolength{\droptitle}{-4pt} %extra adjustment
-% handle multi-line title spacing
-\pretitle{\vspace{0.6\baselineskip}\begin{center}\linespread{1}}
-\posttitle{\par\end{center}}
 
 \input{packages}
 
@@ -40,10 +37,21 @@
 \pagenumbering{arabic}
 
 \thispagestyle{fancy}
-\vspace{-1.5\baselineskip}
+% needs to be defined here or gets overwritten by \thispagestyle{empty} above
+\setlength{\headheight}{19.7478pt}
 
 % to host your content
 \input{content}
+
+% required appendices
+\appendix
+\input{biosketch}
+\input{support}
+\input{biblio}
+\input{facilities}
+\input{equipment}
+\input{dataplan}
+\input{other}
 
 \end{document}
 

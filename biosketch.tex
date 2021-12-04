@@ -1,0 +1,6 @@
+\newlength{\biosketchoffset}
+\setlength{\biosketchoffset}{\headheight}
+\addtolength{\biosketchoffset}{\baselineskip}
+\includepdf[pages=1, pagecommand={\section{Biographical Sketch}\label{sec:biosketch}}, offset=0 -\biosketchoffset]{\BioSketchFile}
+\includepdf[pages=2-, pagecommand={}, offset=0 -\headheight]{\BioSketchFile}
+\clearpage
