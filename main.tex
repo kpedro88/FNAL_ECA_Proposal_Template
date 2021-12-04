@@ -1,0 +1,43 @@
+\documentclass[11pt]{article}
+
+% default packages
+\usepackage[english]{babel}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{xcolor}
+\usepackage{fullpage}
+\usepackage{titlesec}
+
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+\setlength{\parskip}{0pt}
+\titlespacing*{\section}{0pt}{0pt}{0pt}
+\titleformat{\section}{\normalfont\fontsize{11}{15}\bfseries}{\thesection}{1em}{}
+\setlength{\baselineskip}{13pt}
+
+\usepackage{titling}
+\setlength{\droptitle}{-4em} %default
+\addtolength{\droptitle}{-4pt} %extra adjustment
+% handle multi-line title spacing
+\pretitle{\vspace{0.6\baselineskip}\begin{center}\linespread{1}}
+\posttitle{\par\end{center}}
+
+\input{packages}
+
+\input{style}
+
+\input{coverpage}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{fancy}
+\vspace{-1.5\baselineskip}
+
+% to host your content
+\input{content}
+
+\end{document}
+
