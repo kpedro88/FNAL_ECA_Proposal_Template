@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{fullpage}
 \usepackage{titlesec}
+\usepackage{array}
 
 \setlength{\pdfpagewidth}{8.5in}
 \setlength{\pdfpageheight}{11in}
@@ -28,11 +29,16 @@
 
 \input{style}
 
-\input{coverpage}
-
 \begin{document}
+% remove body header from first page
+\thispagestyle{empty}
+% header/footer just on cover page
+\AddToShipoutPicture*{\BackgroundPic}
 
-\maketitle
+\input{coverpage}
+\clearpage
+\pagenumbering{arabic}
+
 \thispagestyle{fancy}
 \vspace{-1.5\baselineskip}
 

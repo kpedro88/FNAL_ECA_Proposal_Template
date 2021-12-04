@@ -1,3 +1,14 @@
+% Cover page header/footer setup
+\usepackage{eso-pic}
+\newcommand\BackgroundPic{%
+\put(0,0){%
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+\centering
+\includegraphics[width=0.95\paperwidth,height=0.95\paperheight,keepaspectratio]{figures/Cover_page_v3_blank.png}%
+\vfill
+}}}
+
 % FNAL header setup
 \definecolor{NALblue}{RGB}{0,76,151}
 \usepackage{fancyhdr}
