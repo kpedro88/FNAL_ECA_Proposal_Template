@@ -39,18 +39,39 @@
 \thispagestyle{fancy}
 % needs to be defined here or gets overwritten by \thispagestyle{empty} above
 \setlength{\headheight}{19.7478pt}
+\newlength{\nsfoffset}
+\setlength{\nsfoffset}{\headheight}
+\addtolength{\nsfoffset}{\baselineskip}
 
 % to host your content
 \input{content}
 
 % required appendices
 \appendix
+
+\includepdf[pages=1, pagecommand={\section{Biographical Sketch}\label{sec:biosketch}}, offset=0 -\nsfoffset]{\BioSketchFile}
+\includepdf[pages=2-, pagecommand={}, offset=0 -\headheight]{\BioSketchFile}
 \input{biosketch}
+\clearpage
+
+\includepdf[pages=1, pagecommand=\section{Current and Pending Support}\label{sec:support}, offset=0 -\nsfoffset]{\SupportFile}
+\includepdf[pages=2-, pagecommand={}, offset=0 -\headheight]{\SupportFile}
 \input{support}
+\clearpage
+
 \input{biblio}
+\clearpage
+
+\section{Facilities and Other Resources}\label{sec:facilities}
 \input{facilities}
+
+\section{Equipment}\label{sec:equipment}
 \input{equipment}
+
+\section{Data Management Plan}\label{sec:dataplan}
 \input{dataplan}
+
+\section{Other Attachments}\label{sec:other}
 \input{other}
 
 \end{document}
