@@ -50,16 +50,6 @@
 % required appendices
 \appendix
 
-\includepdf[pages=1, pagecommand={\section{Biographical Sketch}\label{sec:biosketch}}, offset=0 -\nsfoffset]{\BioSketchFile}
-\includepdf[pages=2-, pagecommand={}, offset=0 -\headheight]{\BioSketchFile}
-\input{biosketch}
-\clearpage
-
-\includepdf[pages=1, pagecommand=\section{Current and Pending Support}\label{sec:support}, offset=0 -\nsfoffset]{\SupportFile}
-\includepdf[pages=2-, pagecommand={}, offset=0 -\headheight]{\SupportFile}
-\input{support}
-\clearpage
-
 \input{biblio}
 \clearpage
 
@@ -71,6 +61,12 @@
 
 \section{Data Management Plan}\label{sec:dataplan}
 \input{dataplan}
+
+\section{Promoting Inclusive and Equitable Research (PIER) Plan}\label{sec:pierplan}
+\input{pierplan}
+
+\section{Recruitment and Retention of Students and Early-Stage Investigators}\label{sec:retention}
+\input{retention}
 
 \section{Other Attachments}\label{sec:other}
 \input{other}
