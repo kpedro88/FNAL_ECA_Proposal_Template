@@ -3,16 +3,16 @@
 This repository facilitates the combination of user content with central style and formatting provided by FNAL.
 
 Users should enter content in the following locations (items 4-10 cover the required appendices):
-1. [info.tex](./info.tex): details for cover page, biosketch, support
+1. [info.tex](./info.tex): details for cover page
 2. [packages.tex](./packages.tex): any additional packages used
 3. [content.tex](./content.tex): the actual proposal content
-4. [biosketch.tex](./biosketch.tex): additional biosketch information (if necessary)
-5. [support.tex](./support.tex): description of research (if necessary)
-6. [biblio.tex](./biblio.tex): references
-7. [facilities.tex](./facilities.tex): facilities
-8. [equipment.tex](./equipment.tex): equipment
-9. [dataplan.tex](./dataplan.tex): data management plan
-10. [other.tex](./other.tex): other attachments (e.g. letters of collaboration using the `\collabletter{}` command)
+4. [biblio.tex](./biblio.tex): references
+5. [facilities.tex](./facilities.tex): facilities
+6. [equipment.tex](./equipment.tex): equipment
+7. [dataplan.tex](./dataplan.tex): data management plan
+8. [pierplan.tex](./pierplan.tex): PIER plan
+9. [other.tex](./other.tex): other attachments (e.g. letters of collaboration using the `\collabletter{}` command)
+10. [labrenewal.tex](./labrenewal.tex): national lab "renewals"
 
 ## Compilation
 
