@@ -34,6 +34,11 @@
 
 \input{base/coverpage}
 \clearpage
+\ifdefined\tocflag
+\thispagestyle{empty}
+\tableofcontents
+\clearpage
+\fi
 \pagenumbering{arabic}
 
 \thispagestyle{fancy}
@@ -59,11 +64,15 @@
 \section{Equipment}\label{sec:equipment}
 \input{equipment}
 
+\clearpage
 \section{Data Management Plan}\label{sec:dataplan}
 \input{dataplan}
+\clearpage
 
+\clearpage
 \section{Promoting Inclusive and Equitable Research (PIER) Plan}\label{sec:pierplan}
 \input{pierplan}
+\clearpage
 
 \section{Other Attachments}\label{sec:other}
 \input{other}
