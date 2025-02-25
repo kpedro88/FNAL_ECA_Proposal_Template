@@ -31,6 +31,7 @@
 \thispagestyle{empty}
 % header/footer just on cover page
 \AddToShipoutPicture*{\BackgroundPic}
+\pagenumbering{gobble}
 
 \input{base/coverpage}
 \clearpage
@@ -52,6 +53,7 @@
 % to host your content
 \input{content}
 
+\clearpage
 % required appendices
 \appendix
 
@@ -59,26 +61,36 @@
 \clearpage
 
 \section{Facilities and Other Resources}\label{sec:facilities}
+% no limit
 \input{facilities}
 
 \section{Equipment}\label{sec:equipment}
+% no limit
 \input{equipment}
 
 \clearpage
 \section{Data Management Plan}\label{sec:dataplan}
+% 2 pages max
 \input{dataplan}
-\clearpage
 
 \clearpage
-\section{Promoting Inclusive and Equitable Research (PIER) Plan}\label{sec:pierplan}
-\input{pierplan}
-\clearpage
+\section{Synergistic Activities}\label{sec:synergy}
+% 1 page max, optional
+\input{synergy}
 
+% Transparency of Foreign Connections: not required for national labs
+
+
+% \clearpage
+% \section{Promoting Inclusive and Equitable Research (PIER) Plan}\label{sec:pierplan}
+% \input{pierplan}
+
+\clearpage
 \section{Other Attachments}\label{sec:other}
 \input{other}
 
-\section{DOE/NNSA National Laboratory \texorpdfstring{``Renewals''}{"Renewals"} of Ongoing Activity}\label{sec:labrenewal}
-\input{labrenewal}
+% \section{DOE/NNSA National Laboratory \texorpdfstring{``Renewals''}{"Renewals"} of Ongoing Activity}\label{sec:labrenewal}
+% \input{labrenewal}
 
 \end{document}
 
